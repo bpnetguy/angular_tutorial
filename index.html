@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="demoApp">
 <body>
 <div class="container" ng-controller="SimpleController">
     <!-- name of the property -->
@@ -12,9 +12,11 @@
 </div>
 <script src="./angular.min.js"> </script>
 <script>
-function SimpleController($scope) {
+
+var demoApp =  angular.module("demoApp",[]);
+demoApp.controller("SimpleController", function($scope) {
     $scope.customers = [{name:'Dave', city:'San Jose'},{name:'John Napur', city: 'Milpitas'}, {name: 'John Heedy', city:'LA'},{name: 'Shriva', city:'SD'}];
-}
+});
 </script>
 
 </body>
