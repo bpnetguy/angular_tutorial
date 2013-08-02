@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app>
 <body>
-<div class="container" ng-init="customers=[{name:'Dave', city:'San Jose'},{name:'Napur', city: 'Milpitas'}, {name: 'Heedy', city:'LA'},{name: 'Shriva', city:'SD'}]">
+<div class="container" ng-controller="SimpleController">
     <!-- name of the property -->
     <!-- {{ name }} data binding-->
     Name: <input type="text" ng-model="name"/> {{ name  | uppercase}}
@@ -11,6 +11,11 @@
 
 </div>
 <script src="./angular.min.js"> </script>
+<script>
+function SimpleController($scope) {
+    $scope.customers = [{name:'Dave', city:'San Jose'},{name:'John Napur', city: 'Milpitas'}, {name: 'John Heedy', city:'LA'},{name: 'Shriva', city:'SD'}];
+}
+</script>
 
 </body>
 </html>
