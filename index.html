@@ -14,9 +14,11 @@
 <script>
 
 var demoApp =  angular.module("demoApp",[]);
-demoApp.controller("SimpleController", function($scope) {
+var controllers = {};
+controllers.SimpleController = function($scope) {
     $scope.customers = [{name:'Dave', city:'San Jose'},{name:'John Napur', city: 'Milpitas'}, {name: 'John Heedy', city:'LA'},{name: 'Shriva', city:'SD'}];
-});
+};
+demoApp.controller(controllers);
 </script>
 
 </body>
